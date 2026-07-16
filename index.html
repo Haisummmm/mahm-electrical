@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAHM Electrical | Solar & Battery Installations NSW</title>
+<meta name="description" content="MAHM Electrical installs residential and commercial solar panel and battery systems across NSW. Talk to Murad Ali for a straightforward quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E2238;
+    --ink-2:#16304C;
+    --gold:#E8A33D;
+    --gold-dark:#B87A22;
+    --teal:#2F6F62;
+    --cream:#FBF8F2;
+    --slate:#4A5A68;
+    --line:rgba(14,34,56,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+  }
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk', sans-serif;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 26px;
+    border-radius:2px;
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    font-size:15px;
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:transform .15s ease, background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--gold); color:var(--ink);}
+  .btn-primary:hover{background:#f0af4d;}
+  .btn-outline{border-color:rgba(255,255,255,0.5); color:#fff;}
+  .btn-outline:hover{background:rgba(255,255,255,0.1);}
+  .btn-outline-dark{border-color:var(--ink); color:var(--ink);}
+  .btn-outline-dark:hover{background:var(--ink); color:#fff;}
+
+  /* header */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--ink);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 24px;
+    color:#fff;
+  }
+  .logo{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:19px;
+    letter-spacing:0.01em;
+  }
+  .logo span{color:var(--gold);}
+  .nav-links{display:flex; align-items:center; gap:32px; font-size:14.5px; font-weight:500;}
+  .nav-links a{opacity:0.85; transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-call{display:flex; align-items:center; gap:8px; font-weight:600; color:var(--gold);}
+  .nav-toggle{display:none;}
+
+  /* hero */
+  .hero{
+    position:relative;
+    background:var(--ink);
+    color:#fff;
+    overflow:hidden;
+    padding:88px 0 0;
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:40px;
+    align-items:center;
+    padding-bottom:60px;
+  }
+  .eyebrow{
+    font-size:13px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:18px; display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{content:''; width:24px; height:1.5px; background:var(--gold);}
+  .hero h1{
+    font-size:clamp(34px, 5vw, 54px);
+    font-weight:700;
+    line-height:1.08;
+    margin-bottom:22px;
+    max-width:620px;
+  }
+  .hero p{
+    font-size:17px;
+    color:rgba(255,255,255,0.78);
+    max-width:480px;
+    margin-bottom:34px;
+  }
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
+  .sun-wrap{position:relative; height:320px;}
+  .sunarc-svg{width:100%; height:100%;}
+  .sun-dot{transform-origin:200px 220px;}
+
+  /* sun arc divider between sections */
+  .arc-divider{
+    display:block; width:100%; height:64px;
+    background:var(--ink);
+  }
+  .arc-divider svg{display:block; width:100%; height:100%;}
+
+  /* stats strip */
+  .stats{
+    background:var(--ink-2);
+    color:#fff;
+    padding:26px 0;
+  }
+  .stats .wrap{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;
+  }
+  .stat{flex:1; min-width:150px;}
+  .stat .num{font-family:'Space Grotesk'; font-size:26px; font-weight:700; color:var(--gold);}
+  .stat .lbl{font-size:13px; color:rgba(255,255,255,0.7); margin-top:2px;}
+
+  section{padding:88px 0;}
+  .section-head{max-width:600px; margin-bottom:52px;}
+  .kicker{
+    font-size:13px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--teal); margin-bottom:14px;
+  }
+  .section-head h2{font-size:clamp(26px,3.4vw,36px); font-weight:600; line-height:1.2;}
+  .section-head p{color:var(--slate); margin-top:14px; font-size:16px;}
+
+  /* services */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .service-card{
+    background:var(--cream);
+    padding:36px 30px;
+    position:relative;
+  }
+  .service-num{
+    font-family:'Space Grotesk'; font-size:13px; font-weight:600;
+    color:var(--gold-dark); margin-bottom:22px; letter-spacing:0.06em;
+  }
+  .service-card h3{font-size:20px; font-weight:600; margin-bottom:12px;}
+  .service-card p{color:var(--slate); font-size:15px;}
+
+  /* why us */
+  .why-section{background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .why-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:36px;}
+  .why-item{padding-top:20px; border-top:2px solid var(--teal);}
+  .why-item h3{font-size:16.5px; font-weight:600; margin-bottom:8px;}
+  .why-item p{font-size:14.5px; color:var(--slate);}
+
+  /* service area */
+  .area{
+    background:var(--ink);
+    color:#fff;
+  }
+  .area-inner{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
+  .area h2{font-size:clamp(26px,3.4vw,34px); font-weight:600; margin-bottom:18px;}
+  .area p{color:rgba(255,255,255,0.75); font-size:16px; margin-bottom:14px;}
+  .area-tags{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px;}
+  .area-tags span{
+    border:1px solid rgba(255,255,255,0.25);
+    padding:7px 14px; border-radius:2px; font-size:13.5px; color:rgba(255,255,255,0.85);
+  }
+  .area-panel{
+    background:var(--ink-2);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:34px;
+  }
+  .area-panel .row{display:flex; justify-content:space-between; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.08); font-size:14.5px;}
+  .area-panel .row:last-child{border-bottom:none;}
+  .area-panel .row span:first-child{color:rgba(255,255,255,0.6);}
+
+  /* contact */
+  .contact-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px;}
+  .contact-info h2{font-size:clamp(26px,3.4vw,34px); font-weight:600; margin-bottom:16px;}
+  .contact-info p{color:var(--slate); margin-bottom:30px; max-width:420px;}
+  .contact-line{
+    display:flex; align-items:center; gap:14px;
+    padding:16px 0; border-top:1px solid var(--line);
+  }
+  .contact-line:last-of-type{border-bottom:1px solid var(--line);}
+  .contact-line .ic{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--ink); color:var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-size:16px; flex-shrink:0;
+  }
+  .contact-line .lbl{font-size:12.5px; color:var(--slate); text-transform:uppercase; letter-spacing:0.06em;}
+  .contact-line .val{font-family:'Space Grotesk'; font-weight:600; font-size:16px;}
+
+  form{background:#fff; border:1px solid var(--line); padding:34px;}
+  .form-row{margin-bottom:18px;}
+  .form-row label{display:block; font-size:13px; font-weight:600; margin-bottom:7px; color:var(--ink);}
+  .form-row input, .form-row select, .form-row textarea{
+    width:100%; padding:12px 14px; border:1px solid var(--line);
+    background:var(--cream); font-family:'Inter'; font-size:14.5px; color:var(--ink);
+    border-radius:2px;
+  }
+  .form-row input:focus, .form-row select:focus, .form-row textarea:focus{
+    outline:2px solid var(--gold); outline-offset:1px; background:#fff;
+  }
+  .form-two{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  form .btn-primary{width:100%; justify-content:center; margin-top:6px;}
+  .form-note{font-size:12.5px; color:var(--slate); margin-top:12px;}
+
+  footer{background:var(--ink); color:rgba(255,255,255,0.7); padding:30px 0;}
+  .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; font-size:13.5px;}
+  .footer-inner .logo{font-size:16px;}
+
+  @media (max-width: 860px){
+    .hero-inner{grid-template-columns:1fr;}
+    .sun-wrap{height:220px; order:-1;}
+    .nav-links{display:none;}
+    .services-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr 1fr;}
+    .area-inner{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .form-two{grid-template-columns:1fr;}
+    section{padding:60px 0;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav wrap">
+    <div class="logo">MAHM <span>ELECTRICAL</span></div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#area">Service area</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-call" href="tel:0411797584">
+      <span aria-hidden="true">&#9742;</span> 0411 797 584
+    </a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow">Solar &amp; battery installers, NSW</div>
+      <h1>Cut your power bills with solar built for your home.</h1>
+      <p>MAHM Electrical designs and installs residential and commercial solar panel and battery systems across NSW — straightforward advice, honest pricing, and a system sized for how you actually use power.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:0411797584">Call Murad for a quote</a>
+        <a class="btn btn-outline" href="#contact">Request a callback</a>
+      </div>
+    </div>
+    <div class="sun-wrap">
+      <svg class="sunarc-svg" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of the sun's arc across the sky, representing a solar generation curve">
+        <line x1="20" y1="220" x2="380" y2="220" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+        <path d="M 40 220 A 160 160 0 0 1 360 220" fill="none" stroke="rgba(232,163,61,0.35)" stroke-width="1.5" stroke-dasharray="3 6"/>
+        <g class="sun-dot">
+          <animateTransform attributeName="transform" type="rotate" from="0 200 220" to="180 200 220" dur="10s" repeatCount="indefinite"/>
+          <circle cx="40" cy="220" r="9" fill="#E8A33D"/>
+          <circle cx="40" cy="220" r="17" fill="none" stroke="#E8A33D" stroke-width="1" opacity="0.4"/>
+        </g>
+        <text x="30" y="245" fill="rgba(255,255,255,0.45)" font-size="11" font-family="Inter">Sunrise</text>
+        <text x="335" y="245" fill="rgba(255,255,255,0.45)" font-size="11" font-family="Inter">Sunset</text>
+        <text x="180" y="60" fill="rgba(255,255,255,0.55)" font-size="11" font-family="Inter">Peak generation</text>
+      </svg>
+    </div>
+  </div>
+  <div class="arc-divider">
+    <svg viewBox="0 0 1200 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,64 C 200,0 1000,0 1200,64 L1200,64 L0,64 Z" fill="#FBF8F2"/>
+    </svg>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="num">NSW-wide</div><div class="lbl">Residential &amp; commercial installs</div></div>
+    <div class="stat"><div class="num">Solar + Battery</div><div class="lbl">Designed as one system</div></div>
+    <div class="stat"><div class="num">Direct line</div><div class="lbl">Speak to Murad, not a call centre</div></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">What we do</div>
+      <h2>Solar and battery systems, done properly.</h2>
+      <p>From your first phone call to the final switch-on, every install is planned around your roof, your usage, and your budget.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01 / Residential</div>
+        <h3>Solar panel installs</h3>
+        <p>Rooftop solar systems for homes across NSW, sized to your household's actual usage — not a one-size-fits-all package.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02 / Storage</div>
+        <h3>Battery storage</h3>
+        <p>Store the power you generate during the day and use it at night, cutting your reliance on the grid even further.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03 / Commercial</div>
+        <h3>Commercial systems</h3>
+        <p>Larger-scale solar and battery installs for businesses looking to bring down operating costs long-term.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Why MAHM Electrical</div>
+      <h2>A straightforward point of contact, start to finish.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>One point of contact</h3>
+        <p>You deal directly with Murad — no call centre, no runaround.</p>
+      </div>
+      <div class="why-item">
+        <h3>Honest sizing</h3>
+        <p>Systems are quoted for your actual usage, not oversold.</p>
+      </div>
+      <div class="why-item">
+        <h3>Clear pricing</h3>
+        <p>You'll know what you're paying for before any work starts.</p>
+      </div>
+      <div class="why-item">
+        <h3>NSW-wide</h3>
+        <p>Residential and commercial installs across the state.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap area-inner">
+    <div>
+      <div class="kicker" style="color:var(--gold);">Coverage</div>
+      <h2>Installing across NSW.</h2>
+      <p>MAHM Electrical takes on residential and commercial jobs across New South Wales. Get in touch with your suburb or region and Murad will confirm availability and timing.</p>
+      <div class="area-tags">
+        <span>Sydney Metro</span>
+        <span>Western Sydney</span>
+        <span>South West Sydney</span>
+        <span>Regional NSW</span>
+      </div>
+    </div>
+    <div class="area-panel">
+      <div class="row"><span>Service type</span><span>Residential &amp; commercial</span></div>
+      <div class="row"><span>Region</span><span>NSW-wide</span></div>
+      <div class="row"><span>Enquiries</span><span>Phone or callback form</span></div>
+      <div class="row"><span>Contact</span><span>Murad Ali</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="kicker">Get in touch</div>
+        <h2>Get a quote for your home or business.</h2>
+        <p>Call, message, or send through your details below and Murad will get back to you to talk through your options.</p>
+
+        <div class="contact-line">
+          <div class="ic" aria-hidden="true">&#9742;</div>
+          <div>
+            <div class="lbl">Phone</div>
+            <div class="val"><a href="tel:0411797584">0411 797 584</a></div>
+          </div>
+        </div>
+        <div class="contact-line">
+          <div class="ic" aria-hidden="true">&#128100;</div>
+          <div>
+            <div class="lbl">Contact</div>
+            <div class="val">Murad Ali</div>
+          </div>
+        </div>
+        <div class="contact-line">
+          <div class="ic" aria-hidden="true">&#128205;</div>
+          <div>
+            <div class="lbl">Coverage</div>
+            <div class="val">NSW-wide</div>
+          </div>
+        </div>
+      </div>
+
+      <form id="quoteForm" action="https://formspree.io/f/muradalikhan@hotmail.com" method="POST">
+        <div class="form-two">
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="04xx xxx xxx" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="suburb">Suburb</label>
+          <input type="text" id="suburb" name="suburb" placeholder="Your suburb">
+        </div>
+        <div class="form-row">
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest">
+            <option>Residential solar</option>
+            <option>Battery storage</option>
+            <option>Commercial system</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us a bit about what you're after"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Request a callback</button>
+        <p class="form-note" id="formNote">Enquiries are sent straight to muradalikhan@hotmail.com.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="logo">MAHM ELECTRICAL</div>
+    <div>&copy; <span id="year"></span> MAHM Electrical. NSW, Australia.</div>
+    <div><a href="tel:0411797584">0411 797 584</a></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var quoteForm = document.getElementById('quoteForm');
+  var formNote = document.getElementById('formNote');
+  quoteForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var data = new FormData(quoteForm);
+    formNote.textContent = 'Sending...';
+    fetch(quoteForm.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response){
+      if(response.ok){
+        quoteForm.reset();
+        formNote.textContent = 'Thanks — your enquiry has been sent. Murad will be in touch shortly.';
+      } else {
+        response.json().then(function(json){
+          if(json && json.errors){
+            formNote.textContent = 'Something went wrong. Please call 0411 797 584 directly.';
+          } else {
+            formNote.textContent = 'Something went wrong. Please call 0411 797 584 directly.';
+          }
+        }).catch(function(){
+          formNote.textContent = 'Something went wrong. Please call 0411 797 584 directly.';
+        });
+      }
+    }).catch(function(){
+      formNote.textContent = 'Something went wrong. Please call 0411 797 584 directly.';
+    });
+  });
+</script>
+
+</body>
+</html>
